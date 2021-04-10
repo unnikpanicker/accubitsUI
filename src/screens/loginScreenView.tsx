@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     color: '#EF0D33',
     textAlign: 'center',
     marginTop: 20,
-    marginBottom:-5
+    marginBottom: -5,
   },
   loginLogo: {
     width: 110,

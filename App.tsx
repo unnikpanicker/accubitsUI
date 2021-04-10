@@ -2,7 +2,7 @@
  * React native application for Accubits ui
  * Developed By : "Unnikrishnan N"
  * Date : "10 April 2021"
- * 
+ *
  * @format
  */
 import 'react-native-gesture-handler';
@@ -22,10 +22,14 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen
             name="Login"
-            options={{headerShown:false}}
+            options={{headerShown: false}}
             component={LoginScreen}
           />
-          <Stack.Screen name="Dashboard" options={{headerShown:false}} component={DashboardScreen} />
+          <Stack.Screen
+            name="Dashboard"
+            options={{headerShown: false}}
+            component={DashboardScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

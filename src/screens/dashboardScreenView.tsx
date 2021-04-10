@@ -2,9 +2,6 @@ import React from 'react';
 import {View, StyleSheet, Text, StatusBar, Image, Alert} from 'react-native';
 import {IDashboardProps} from '../types';
 import {useNavigation} from '@react-navigation/core';
-import {Button} from 'react-native-elements';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DashboardScreen = ({route}: IDashboardProps) => {
   const navigation = useNavigation();
