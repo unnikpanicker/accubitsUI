@@ -1,8 +1,33 @@
 import React from 'react';
-import {View, StyleSheet, Text, StatusBar, Image} from 'react-native';
+import {View, StyleSheet, Text, StatusBar, Image, Alert} from 'react-native';
 import {IDashboardProps} from '../types';
+import {useNavigation} from '@react-navigation/core';
+import {Button} from 'react-native-elements';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DashboardScreen = ({route}: IDashboardProps) => {
+  const navigation = useNavigation();
+  React.useEffect(
+    () =>
+      navigation.addListener('beforeRemove', e => {
+        e.preventDefault();
+        Alert.alert(
+          'Do you want to logout?',
+          'You are trying to leave the dashboard. Are you sure ?',
+          [
+            {text: "Don't leave", style: 'cancel', onPress: () => {}},
+            {
+              text: 'Logout',
+              style: 'destructive',
+              onPress: () => navigation.dispatch(e.data.action),
+            },
+          ],
+        );
+      }),
+    [navigation],
+  );
+
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
