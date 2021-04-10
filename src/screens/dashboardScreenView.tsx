@@ -1,0 +1,62 @@
+import React from 'react';
+import {View, StyleSheet, Text, StatusBar, Image} from 'react-native';
+import {IDashboardProps} from '../types';
+
+const DashboardScreen = ({route}: IDashboardProps) => {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
+      <View style={styles.container}>
+        <View style={styles.welcomeView}>
+          <Image
+            source={require('./../images/logo_transparent.png')}
+            style={styles.loginLogo}
+          />
+          <Text style={styles.welcomeText}>Welcome </Text>
+          <Text style={styles.userNameText}>{route.params.username} </Text>
+        </View>
+      </View>
+    </>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  welcomeView: {
+    backgroundColor: '#FFFFFF',
+    width: 300,
+    height: 350,
+    position: 'absolute',
+    flex: 1,
+    top: 100,
+    padding: 20,
+  },
+  welcomeText: {
+    color: '#EF0D33',
+    textAlign: 'center',
+    marginTop: 20,
+    fontWeight: 'bold',
+    fontFamily: 'Montserrat',
+    fontSize: 24,
+  },
+  userNameText: {
+    color: '#EF0D33',
+    textAlign: 'center',
+    marginTop: 20,
+    fontFamily: 'Montserrat',
+    fontStyle: 'italic',
+    fontSize: 20,
+  },
+  loginLogo: {
+    width: 110,
+    height: 70,
+    alignSelf: 'center',
+  },
+});
+
+export default DashboardScreen;
