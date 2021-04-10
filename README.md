@@ -1,7 +1,6 @@
 # accubitsUI
 
 React native application for Accubits UI
-
 ## The tasks to be done
 
 - Create a React Native app page with the following and share application screenshots and final source code through git or any file sharing option of your choice.
@@ -32,3 +31,10 @@ https://fonts.google.com/specimen/Montserrat
 - username can be any value
 - password must be 'demo'
 
+## Screenshots
+
+![Login Screenshot](https://github.com/unnikpanicker/accubitsUI/blob/master/screenshots/1.jpeg)
+
+![Dashboard Screenshot](https://github.com/unnikpanicker/accubitsUI/blob/master/screenshots/2.jpeg)
+
+![Logout confirmation Screenshot](https://github.com/unnikpanicker/accubitsUI/blob/master/screenshots/3.jpeg)
